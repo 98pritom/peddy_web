@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="w-11/12 mx-auto py-3 px-0 flex justify-between items center">
+            <div class="flex gap-2 items-center">
+                <img src="assets/logo.webp" alt="" class="w-6 h-5 object-cover">
+                <span class="text-lg font-extrabold
+                ">Peddy</span>
+            </div>
+            <div class="flex gap-5">
+                <button class="font-bold text-gray-500
+                ">Home</button>
+                <button class="font-bold text-gray-500
+                ">Shop</button>
+                <button class="font-bold text-gray-500
+                ">Contact</button>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/?size=48&id=Ho7Ja1axRBw2&format=png" alt="" class="h-10 rounded-full">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- banner top -->
+        <section>
+            <div class="banner-top w-11/12 mx-auto py-10 justify-center text-center">
+                <h2 class="text-xl font-bold text-gray-500 py-2">Bringing Families Together ❤️‍🔥 </h2>
+                <p class="text-6xl font-semibold">Your Path to Adoption <br>Starts Here</p>
+                <p class="text-lg font-medium py-5">"Find your purr-fect companion! 🐾 <br> Our vibrant and heartwarming
+                    pet
+                    adoption website connects loving pets with caring homes. <br> Explore adorable profiles, get expert
+                    care
+                    tips, and start your journey toward unconditional love today! ❤️🏡"</p>
+
+                <a href="#adopt-your-best-friend">
+                    <div class="btn rounded-full bg-cyan-900 hover:bg-cyan-600 text-white">View More</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- banner mid -->
+        <section>
+            <div class="w-11/12 mx-auto py-10 text-center">
+                <img src="assets/pet.webp" alt="" class="mx-auto">
+                <h1 id="adopt-your-best-friend" class="text-4xl font-semibold py-5">Adopt Your Best Friend</h1>
+                <p class="text-lg py-5 text-gray-500">"Give a loving home to a furry friend! 🐾 <br> Discover loyal
+                    companions waiting to bring joy,
+                    warmth, and
+                    endless cuddles into your life. <br> ❤️ Start your adoption journey today!"</p>
+            </div>
+            <div id="category-container" class="w-11/12 mx-auto flex flex-wrap gap-4 justify-center py-10 text-center">
+            </div>
+
+            <div
+                class="w-11/12 mx-auto px-4 sm:px-8 md:px-16 lg:px-[210px] flex items-center justify-between flex-col sm:flex-row py-4">
+                <h2 class="text-lg font-bold">Best Deal For You</h2>
+                <button class="btn btn-success text-white">Sort By Price</button>
+            </div>
+        </section>
+        <!-- main content container -->
+        <section>
+            <div class="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-2 py-10">
+                <!-- Pet Cards Section -->
+                <div id="all-data-container"
+                    class="justify-items-center lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- all data here -->
+                </div>
+
+                <!-- Image Grid Section -->
+
+                <div id="like-container"
+                    class="w-[400px] h-[500px] rounded-xl bg-gray-100 border grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 auto-rows-[140px] overflow-y-scroll">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button id="detailsModalShow" class="btn hidden" onclick="detailsModal.showModal()">open modal</button>
+        <dialog id="detailsModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="details-content">
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Modal for Countdown -->
+        <div id="countdownModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-6 rounded-lg text-center">
+                <h2 class="text-xl font-bold mb-4">Adoption in Progress...</h2>
+                <p id="countdownText" class="text-lg font-semibold">3 seconds remaining</p>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer bg-gray-800 text-base-200 p-10">
+        <nav>
+            <div class="flex gap-2 items-center px-0">
+                <img src="assets/logo.webp" alt="">
+                <h1 class="text-lg font-semibold">Peddy</h1>
+            </div>
+            <div class="py-2">
+                <p class="py-1">Location: av. Washington 165, NY CA 54003</p>
+                <p class="py-1">Phone: +31 85 964 47 25</p>
+                <p class="py-1">Email: info@yourdomain.com </p>
+                <p class="py-1">Openings hours: 9.00 AM - 5.00 PM</p>
+            </div>
+            <p class="py-5">
+                <br>
+                <br>
+                <br>
+
+            </p>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Useful Links</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">Foundation</a>
+            <a class="link link-hover">Animals</a>
+            <a class="link link-hover">Contact</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+            <h6 class="footer-title">Drop a message</h6>
+            <fieldset class="form-control w-80">
+                <label class="label">
+                    <span class="label-text">Enter your email address</span>
+                </label>
+                <div class="join">
+                    <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
+                    <button class="btn btn-primary join-item">Subscribe</button>
+                </div>
+            </fieldset>
+        </form>
+    </footer>
+    <div class="footer footer-center bg-gray-800 text-base-200 p-4">
+        <aside>
+            <p>Copyright © - All right reserved by Peddy</p>
+        </aside>
+    </div>
+
+    <!-- script -->
+    <script src="js/starter.js"></script>
+
+</body>
+
+</html>
