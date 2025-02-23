@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Peddy</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/logo.webp">
 </head>
 
 <body>
@@ -74,6 +75,13 @@
                 <div id="all-data-container"
                     class="justify-items-center lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- all data here -->
+                    <!-- circular progress indicator -->
+                    <div id="loader"
+                        class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                        <div class="animate-spin rounded-full h-16 w-16 border-4 border-white border-t-transparent">
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Image Grid Section -->
@@ -111,7 +119,7 @@
 
 
     </main>
-    <footer class="footer bg-gray-800 text-base-200 p-10">
+    <footer class="footer bg-gray-800 text-base-200 p-5">
         <nav>
             <div class="flex gap-2 items-center px-0">
                 <img src="assets/logo.webp" alt="">
@@ -123,12 +131,6 @@
                 <p class="py-1">Email: info@yourdomain.com </p>
                 <p class="py-1">Openings hours: 9.00 AM - 5.00 PM</p>
             </div>
-            <p class="py-5">
-                <br>
-                <br>
-                <br>
-
-            </p>
         </nav>
         <nav>
             <h6 class="footer-title">Useful Links</h6>
@@ -156,7 +158,7 @@
             </fieldset>
         </form>
     </footer>
-    <div class="footer footer-center bg-gray-800 text-base-200 p-4">
+    <div class="footer footer-center bg-gray-800 text-base-200 p-2">
         <aside>
             <p>Copyright © - All right reserved by Peddy</p>
         </aside>

@@ -6,6 +6,16 @@ async function loadCategoryWiseData(category) {
     displayAllData(data.data);
 }
 
+// Show loader
+function showLoader() {
+    document.getElementById('loader').classList.remove('hidden');
+}
+
+// Hide loader
+function hideLoader() {
+    document.getElementById('loader').classList.add('hidden');
+}
+
 // adopt functionality
 function adoptPet(button) {
     console.log(button);
@@ -54,9 +64,11 @@ const loadCategoryData = async () => {
 
 // all data load
 const loadAllData = async () => {
+    showLoader();
     const uri = 'https://openapi.programming-hero.com/api/peddy/pets';
     const res = await fetch(uri);
     const data = await res.json();
+    hideLoader();
     displayAllData(data.pets);
 }
 
